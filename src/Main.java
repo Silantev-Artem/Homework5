@@ -13,33 +13,28 @@ public class Main {
         System.out.println("\nЗадание 2");
         int clientDeviceYear = 2015;
 
-        if (clientDeviceYear < 2015) {
-            if (clientOS == 0) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            }
-        }else if (clientDeviceYear >= 2015) {
-            if (clientOS == 0)  {
-                System.out.println("Установите версию приложения для iOS по ссылке");
-            } else  {
-                System.out.println("Установите версию приложения для Android по ссылке");
-            }
+        if (clientDeviceYear < 2015 && clientOS == 0) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        }else if (clientDeviceYear < 2015 && clientOS == 1){
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        }else if  (clientDeviceYear >= 2015 && clientOS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (clientDeviceYear >= 2015 && clientOS == 1){
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
+
 
         System.out.println("\nЗадание 3");
 
         int year = 2025;
 
-        if (year >= 1584){
-            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-                System.out.println(year + " год является високосным");
-            }else {
-                System.out.println(year + " год не является високосным");
-            }
+        if ((year >= 1584 && year % 4 == 0 && year % 100 != 0) || (year >= 1584 && year % 400 == 0)) {
+            System.out.println(year + " год является високосным");
+        } else if (year >= 1584) {
+            System.out.println(year + " год не является високосным");
         } else {
             System.out.println(year + " год до разделения на високосный и невисокосный");
-            }
+        }
 
 
         System.out.println("\nЗадание 4");
